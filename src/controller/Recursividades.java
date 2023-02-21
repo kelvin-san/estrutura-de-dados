@@ -5,6 +5,8 @@ public class Recursividades {
 		super();
 	}
 	
+	
+	// Exercício 1
 	public int multBySum(int a, int b) {
 		if (b == 1) {
 			return a;
@@ -15,18 +17,18 @@ public class Recursividades {
 		}
 	}
 	
-	int resto = 0;
+	// Exercício 2
 	public int remDiv(int dividendo, int divisor) {
 		if (dividendo < divisor) {
-			return resto;
+			return dividendo;
 			
 		} else {
-			resto = dividendo - divisor;
-			return remDiv(resto, divisor);
+			return remDiv((dividendo - divisor), divisor);
 			
 		}
 	}
 	
+	// Exercício 3
 	public int nPairs(int[] vet, int vetLenght) {
 		if (vetLenght < 1) {
 			return 0;
