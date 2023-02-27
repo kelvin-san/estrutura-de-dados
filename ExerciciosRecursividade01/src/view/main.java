@@ -14,9 +14,9 @@ public class main {
 		System.out.println(Rec.remDiv(9, 5));
 		
 		int[] vet = {1, 2, 3, 4, 5};
-		int vetLenght = vet.length;
+		int vetLength = vet.length;
 		System.out.println("EXERCICIO 3:");
-		System.out.println(Rec.nPairs(vet, vetLenght));
+		System.out.println(Rec.nPairs(vet, vetLength));
 	}
 
 }

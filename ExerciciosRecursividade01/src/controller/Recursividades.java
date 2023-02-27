@@ -29,14 +29,14 @@ public class Recursividades {
 	}
 	
 	// Exercício 3
-	public int nPairs(int[] vet, int vetLenght) {
-		if (vetLenght < 1) {
+	public int nPairs(int[] vet, int vetLength) {
+		if (vetLength < 1) {
 			return 0;
 		} else {
-			if (vet[vetLenght-1] % 2 == 0) {
-				return 1 + nPairs(vet, vetLenght-1);
+			if (vet[vetLength-1] % 2 == 0) {
+				return 1 + nPairs(vet, vetLength-1);
 			} else {
-				return nPairs(vet, vetLenght-1);
+				return nPairs(vet, vetLength-1);
 			}
 		}
 	}
