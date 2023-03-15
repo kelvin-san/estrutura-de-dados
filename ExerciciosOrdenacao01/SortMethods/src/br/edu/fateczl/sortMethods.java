@@ -1,8 +1,8 @@
-package br.edu.fateczl.sortMethods;
+package br.edu.fateczl;
 
-public class Sort {
+public class sortMethods {
 
-	public Sort() {
+	public sortMethods() {
 		super();
 	}
 	
@@ -12,8 +12,8 @@ public class Sort {
 		int aux;
 		
 		for (int i = 0; i < vectorLength; i++) {
-			for (int j = i+1; j < vectorLength-1; j++) {
-				if (vector[j] < vector[i]) {
+			for (int j = 0; j < vectorLength-1; j++) {
+				if (vector[i] < vector[j]) {
 					aux = vector[j];
 					vector[j] = vector[i];
 					vector[i] = aux;
@@ -27,7 +27,7 @@ public class Sort {
 	// Retorna o vetor recebido ordenado por merge sort
 	public int[] mergeSort(int[] vector, int start, int end) {
 		if (start < end) {
-			int mid = (int) (start + end) / 2;
+			int mid = (start + end) / 2;
 			mergeSort(vector, start, mid);
 			mergeSort(vector,  mid+1, end);
 			merge(vector, start, mid, end);
@@ -38,17 +38,16 @@ public class Sort {
 	
 	// Intercala 2 subvetores provenientes do método merge sort
 	private void merge(int[] vector, int start, int mid, int end) {
-		int vectorLength = vector.length;
-		int[] vAux = new int[vectorLength];
+		int[] vAux = new int[vector.length];
 		
-		for (int i = 0; i < vectorLength; i++) {
+		for (int i = 0; i <= end; i++) {
 			vAux[i] = vector[i];
 		}
 		
 		int i = start;
 		int j = mid+1;
 		
-		for(int n = start; n < end; n++) {
+		for (int n = start; n <= end; n++) {
 			if (i > mid) {
 				vector[n] = vAux[j];
 				j++;
@@ -62,8 +61,7 @@ public class Sort {
 				vector[n] = vAux[j];
 				j++;
 			}
-		}
-		
+		}	
 	}
-
+	
 }
