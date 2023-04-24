@@ -7,8 +7,6 @@ import model.Client;
 public class CallingController {
 	
 	private int priorityQueueCounter = 0;
-	// Inserir na fila
-	// Chamar próximo + regra de negócio
 	
 	public CallingController() {
 		super();
