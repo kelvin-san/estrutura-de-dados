@@ -25,7 +25,7 @@ public class ParkController {
 				if (age > 16 && height > 1.6) {
 					System.out.println(name + "\t\t" + "Entrou");					
 				} else {
-					System.out.println(name + "\t\t" + "Não pode entrar");
+					System.out.println(name + "\t\t" + "Nao pode entrar");
 				}
 				
 			}
