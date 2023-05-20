@@ -1,14 +1,13 @@
 package br.edu.fateczl;
 
-import br.edu.fateczl.Node;
-
 public class StringStack {
-
-	public StringStack() {
-		super();
-	}
 	
 	Node top;
+
+	public StringStack() {
+		top = null;
+	}
+	
 	
 	public boolean isEmpty() {
 		if (top == null) {
@@ -29,18 +28,18 @@ public class StringStack {
 		}
 	}
 	
-	public String pop() {
+	public String pop() throws Exception {
 		if (isEmpty()) {
-			System.err.println("Não ha elementos para desempilhar");
+			throw new Exception("There are no elements to unstack");
 		}
 		String value = top.data;
 		top = top.next;
 		return value;
 	}
 	
-	public String top() {
+	public String top() throws Exception {
 		if (isEmpty()) {
-			System.err.println("Não ha elementos na pilha");
+			throw new Exception("There are no elements to unstack");
 		}
 		String value = top.data;
 		return value;

@@ -2,7 +2,7 @@ package br.edu.fateczl;
 
 public class Node {
 
-	int data;
+	Object data;
 	Node next;
 
 }

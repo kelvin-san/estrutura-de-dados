@@ -1,10 +1,10 @@
 package br.edu.fateczl;
 
-public class IntStack {
+public class ObjectStack {
 	
 	Node top;
 
-	public IntStack() {
+	public ObjectStack() {
 		top = null;
 	}
 	
@@ -17,7 +17,7 @@ public class IntStack {
 		}
 	}
 	
-	public void push(int e) {
+	public void push(Object e) {
 		Node element = new Node();
 		element.data = e;
 		if (isEmpty()) {
@@ -28,20 +28,20 @@ public class IntStack {
 		}
 	}
 	
-	public int pop() throws Exception {
+	public Object pop() throws Exception {
 		if (isEmpty()) {
 			throw new Exception("There are no elements to unstack");
 		}
-		int value = top.data;
+		Object value = top.data;
 		top = top.next;
 		return value;
 	}
 	
-	public int top() throws Exception {
+	public Object top() throws Exception {
 		if (isEmpty()) {
 			throw new Exception("There are no elements to unstack");
 		}
-		int value = top.data;
+		Object value = top.data;
 		return value;
 	}
 	
